@@ -1,0 +1,11 @@
+fastapi==0.112.2
+uvicorn[standard]==0.30.6
+pydantic==2.8.2
+pandas==2.2.2
+python-dotenv==1.0.1
+cachetools==5.5.0
+typing-extensions==4.12.2
+numpy==2.3.4
+matplotlib==3.10.7
+scikit-learn==1.7.2
+seaborn==0.13.2

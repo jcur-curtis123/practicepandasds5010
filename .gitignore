@@ -1,0 +1,19 @@
+# macOS specific stuff
+*.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.myenv
+env/
+myenv/
+ENV/
+env.bak/
+myenv.bak/
+
+# vscode
+.vscode/
