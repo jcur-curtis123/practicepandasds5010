@@ -31,7 +31,6 @@ lineplot:
 reset: clean
 	rm figures/*.png
 
-
 setup_prereqs:
 	pip install --upgrade pip
 	pip install -r requirements.txt

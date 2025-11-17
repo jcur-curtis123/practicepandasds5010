@@ -3,7 +3,6 @@ import random
 import numpy as np
 
 
-
 def make_list(n=10000000, k=1000):
     """
     returns a list of n random numbers (each between 1 and k) 
@@ -20,12 +19,21 @@ def square_list(li):
         x.append(li[i] ** 2)
     return x
 
+'''
+create an np array from a given list 
+'''
 def make_np_arr_from_list(li):
     return np.array(li)
 
+'''
+square the given np array
+'''
 def square_np_arr(np_arr):
     return np_arr ** 2
 
+'''
+make an np array directly, instead of make_list, a traditional python list
+'''
     
 def make_np_arr_directly(n=10000000, k=1000):
     # make a 1 dimensional arr that contains random numbers between 1 and k
@@ -73,7 +81,6 @@ def main():
     '''
     time to execute squared random integers directy with numpy
     '''    
-
     print("Timing make_np_arr_directly(): ")
     with Timer():
         rand_np_direct = make_np_arr_directly()

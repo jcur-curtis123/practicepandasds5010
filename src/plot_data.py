@@ -11,9 +11,9 @@ print("done with imports\n")
 '''
 structure of make_figure from the assignment in canvas
 
-after attempts of running debugging, data param is required for driver to run the given figures
+use seaborn's boxplot, scatterplot, and lineplot functionality
 
-see driver for this implementation
+see driver for this implementation on how users can choose their preferred graph
 '''
 def make_figure(data):
     data = data.sort_values(by=['education'])
@@ -30,27 +30,28 @@ def make_figure(data):
     plt.savefig(filepath)
 
 '''
-make_scatter_plot considers education as x axis, and age as y axis. 
+make_scatter_plot considers education as x axis, and wage as y axis. 
 
-data is the df for this graph
+sort data by education
+
+inspiration from boxplot in creation of this make_scatter_plot
 '''  
 
 def make_scatter_plot(data):
-    data = data.sort_values(by=['age'])
-    scatterplot(x="education", y="age", data=data)
+    data = data.sort_values(by=['education'])
+    scatterplot(x="education", y="wage", data=data)
     fig = plt.gcf()
     fig.set_size_inches(10,15)
     plt.xticks()
-    plt.show()
+    plt.show() # pauses the running of the code to display our code
     now = datetime.datetime.now()
     filepath = f"{CWD}/figures/scatterplot_{now}.png"
     plt.savefig(filepath)
 
-
 '''
 line graph (plot) consider x axis for wage, and y axis for age
 
-sort data by wage - data is used in lineplot() and is the df for this function
+sort data by wage
 
 .png is saved with plt.savefig()
 '''
@@ -60,7 +61,7 @@ def make_line_plot(data):
     fig = plt.gcf()
     fig.set_size_inches(10, 15)
     plt.xticks()
-    plt.show()
+    plt.show() # pauses the running of the code to display our code
     now = datetime.datetime.now()
     filepath = f"{CWD}/figures/lineplot_{now}.png"
     plt.savefig(filepath)

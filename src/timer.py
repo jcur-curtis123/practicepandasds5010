@@ -17,8 +17,7 @@ class Timer:
 
     python will throw a protocol error if not included - thus needed for compare.py
     
-    see instance of with Timer()
-
+    see instance of with Timer() in compare.py
 
     '''
     

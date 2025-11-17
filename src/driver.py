@@ -4,14 +4,19 @@ from utils_package.utils import CWD
 
 
 def main():
+
     '''
     gives user an option to choose which graph or plot to run
+
+    read in via read_csv data/Wage.csv and define df
     '''
     df = utils.read_csv("data/Wage.csv")
     print("Pick a graph to run: ")
     print("1: Boxplot")
     print("2: Scatterplot")
     print("3: Lineplot")
+
+    # choice for user validated via input 
     choice = input("Enter 1, 2, or 3: ").strip()
 
     if choice == "1":
