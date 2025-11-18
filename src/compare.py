@@ -34,7 +34,6 @@ def square_np_arr(np_arr):
 '''
 make an np array directly, instead of make_list, a traditional python list
 '''
-    
 def make_np_arr_directly(n=10000000, k=1000):
     # make a 1 dimensional arr that contains random numbers between 1 and k
     return np.random.randint(1, k+1, n) 
@@ -49,7 +48,7 @@ def main():
     rand_np_arr = make_np_arr_from_list(rand_list)
     squared = square_list(rand_list)
     # squared = square_list(rand_np_arr)
-    print(squared[:10])
+    print("Squaring list: ", squared[:10])
     
     '''
     return the time to build the python list of size n (1,000,000)
@@ -72,20 +71,25 @@ def main():
     '''
     time to convert list to numpy array and square using vectorization
     '''    
-    print("Timing make_np_arr_from_list:")
+    print("Timing make_np_arr_from_list() and squaring:")
     with Timer():
         rand_np_arr = make_np_arr_from_list(rand_list)
         squared_np = square_np_arr(rand_np_arr)
         print(squared_np[:10])
 
     '''
-    time to execute squared random integers directy with numpy
+    time to execute make_np_arr_directly
     '''    
     print("Timing make_np_arr_directly(): ")
     with Timer():
-        rand_np_direct = make_np_arr_directly()
-        squared_np_direct = square_np_arr(rand_np_direct)
-        print(squared_np_direct[:10])
+        rand_direct = make_np_arr_directly()
+        print(rand_direct[:10])
+
+    print("Cool, now lets square make_np_arr_directly()")
+    with Timer():
+        rand_direct = make_np_arr_directly()
+        squared_rand_direct = square_np_arr(rand_direct)
+        print(squared_rand_direct[:10])
 
 if __name__ == "__main__":
     main()
